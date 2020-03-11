@@ -48,3 +48,15 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 1. `helm create jp-spa-react`
 2. Rename folder to `.helm`
 3. `helm install jp-spa-react .helm`
+    ```yaml
+    NAME: jp-spa-react
+    LAST DEPLOYED: Wed Mar 11 15:10:40 2020
+    NAMESPACE: default
+    STATUS: deployed
+    REVISION: 1
+    NOTES:
+    1. Get the application URL by running these commands:
+    export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=jp-spa-react,app.kubernetes.io/instance=jp-spa-react" -o jsonpath="{.items[0].metadata.name}")
+    echo "Visit http://127.0.0.1:8080 to use your application"
+    kubectl --namespace default port-forward $POD_NAME 8080:80
+    ```
