@@ -10,7 +10,7 @@ export class PhotosComponent extends React.Component<PhotosProps, {}> {
 
     public render(): JSX.Element {
         return (
-            <Image src="../assets/Snapchat-704939441.jpg" fluid roundedCircle />
+            <Image src="../assets/IMG_20200224_230417_024.jpg" fluid roundedCircle />
         );
     }
 }
