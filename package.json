@@ -12,6 +12,7 @@
     "@types/react-dom": "^16.9.0",
     "bootstrap": "^4.4.1",
     "react": "^16.13.0",
+    "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
     "typescript": "~3.7.2"
@@ -20,7 +21,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",    
+    "eject": "react-scripts eject",
     "docker:build": "docker build ./ -t jp-spa-react",
     "docker:tag": "docker tag jp-spa-react us.gcr.io/sleipnir/jp-spa-react:$(git rev-parse HEAD)",
     "docker:publish": "gcloud docker -- push us.gcr.io/sleipnir/jp-spa-react:$(git rev-parse HEAD)"
