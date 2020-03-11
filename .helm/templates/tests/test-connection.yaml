@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "jp-spa-react.fullname" . }}-test-connection"
+  labels:
+{{ include "jp-spa-react.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "jp-spa-react.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
