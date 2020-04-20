@@ -24,13 +24,13 @@ pipeline {
                 }
             }
         }
-        stage('Test') {
-            steps{
-                dir('/root/workspace/jasper.pedersen.io-spa-react') {
-                    sh 'yarn test'
-                }
-            }
-        }
+        // stage('Test') {
+        //     steps{
+        //         dir('/root/workspace/jasper.pedersen.io-spa-react') {
+        //             // sh 'yarn test'
+        //         }
+        //     }
+        // }
         stage('Docker') {
             steps {
                 dir('/root/workspace/jasper.pedersen.io-spa-react') {
