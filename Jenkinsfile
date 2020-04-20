@@ -10,6 +10,13 @@ pipeline {
                 }
             }
         }
+        stage('Dependencies') {
+            steps{
+                dir('/root/workspace/jasper.pedersen.io-spa-react') {
+                    sh 'yarn install'
+                }
+            }
+        }
         stage('Build') {
             steps{
                 dir('/root/workspace/jasper.pedersen.io-spa-react') {
